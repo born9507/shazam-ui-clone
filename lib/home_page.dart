@@ -298,40 +298,6 @@ class FirstTab extends StatelessWidget {
   }
 }
 
-class AlbumCard extends StatelessWidget {
-  const AlbumCard({
-    Key? key,
-    required this.imageUrl,
-    required this.name,
-    required this.artist,
-  }) : super(key: key);
-
-  final String imageUrl;
-  final String name;
-  final String artist;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image.network(
-            imageUrl,
-            width: MediaQuery.of(context).size.width * 0.29,
-          ),
-          Text(
-            name,
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text(artist),
-        ],
-      ),
-    );
-  }
-}
-
 class SecondTab extends StatelessWidget {
   const SecondTab({Key? key}) : super(key: key);
 
@@ -659,6 +625,40 @@ class ThirdTab extends StatelessWidget {
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class AlbumCard extends StatelessWidget {
+  const AlbumCard({
+    Key? key,
+    required this.imageUrl,
+    required this.name,
+    required this.artist,
+  }) : super(key: key);
+
+  final String imageUrl;
+  final String name;
+  final String artist;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.network(
+            imageUrl,
+            width: MediaQuery.of(context).size.width * 0.29,
+          ),
+          Text(
+            name,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(artist),
         ],
       ),
     );
