@@ -44,7 +44,6 @@ class _HomePageState extends State<HomePage> {
                               DefaultTabController.of(context)?.index == 1
                                   ? Colors.white
                                   : Colors.blue,
-                          // controller: _tabController,
                           indicatorSize: 8,
                         ),
                       ),
